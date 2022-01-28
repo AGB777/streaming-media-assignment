@@ -1,15 +1,15 @@
-//required modules
-const fs = require("fs");
+// required modules
+const fs = require('fs');
 
-//load homepage
+// load homepage
 const index = fs.readFileSync(`${__dirname}/../client/client.html`);
 
-//respond to requests with the homepage
+// respond to requests with the homepage
 const getIndex = (request, response) => {
-    response.writeHead(200, {'Content-Type':'text/html'});
-    response.write(index);
-    response.end();
-}
+  response.writeHead(200, { 'Content-Type': 'text/html' });
+  response.write(index);
+  response.end();
+};
 
-//exporting function
+// exporting function
 module.exports.getIndex = getIndex;
